@@ -1,0 +1,54 @@
+1. Importações:
+   ```java
+   import java.util.Scanner;
+   ```
+   Aqui, importamos a classe `Scanner` do pacote `java.util`. Isso nos permite ler entrada do usuário a partir do teclado.
+
+2. Declaração da classe:
+   ```java
+   public class TipoDeTriangulo {
+   ```
+   Começamos definindo uma classe chamada `TipoDeTriangulo`. O nome da classe deve ser o mesmo que o nome do arquivo Java.
+
+3. Método `main`:
+   ```java
+   public static void main(String[] args) {
+   ```
+   Aqui, declaramos o método `main`. Este é o ponto de entrada do programa Java. O código dentro deste método será executado quando o programa for iniciado.
+
+4. Criação de um objeto Scanner:
+   ```java
+   Scanner input = new Scanner(System.in);
+   ```
+   Criamos um objeto `Scanner` chamado `input` para ler a entrada do usuário a partir do teclado.
+
+5. Leitura dos comprimentos dos lados:
+   ```java
+   System.out.println("Digite o comprimento do primeiro lado do triângulo: ");
+   double lado1 = input.nextDouble();
+   ```
+   Usamos o objeto `input` para exibir uma mensagem ao usuário pedindo o comprimento do primeiro lado do triângulo e, em seguida, lemos o valor inserido pelo usuário como um número decimal (tipo `double`). Isso é repetido para os outros dois lados (`lado2` e `lado3`).
+
+6. Determinação do tipo de triângulo:
+   ```java
+   if (lado1 == lado2 && lado2 == lado3) {
+       System.out.println("Este é um triângulo equilátero.");
+   } else if (lado1 == lado2 || lado2 == lado3 || lado1 == lado3) {
+       System.out.println("Este é um triângulo isósceles.");
+   } else {
+       System.out.println("Este é um triângulo escaleno.");
+   }
+   ```
+   Utilizamos uma série de instruções `if` e `else` para determinar o tipo de triângulo com base nos comprimentos dos lados fornecidos pelo usuário. As condições são as seguintes:
+
+   - Se todos os três lados forem iguais (`lado1 == lado2 && lado2 == lado3`), é um triângulo equilátero.
+   - Se pelo menos dois lados forem iguais (`lado1 == lado2 || lado2 == lado3 || lado1 == lado3`), é um triângulo isósceles.
+   - Caso contrário, se nenhum dos casos acima for verdadeiro, é um triângulo escaleno.
+
+7. Fechamento do objeto Scanner:
+   ```java
+   input.close();
+   ```
+   Após a conclusão do programa, é uma boa prática fechar o objeto `Scanner` para liberar recursos.
+
+Esse código Java lê os comprimentos dos lados de um triângulo, determina o tipo de triângulo com base nesses comprimentos e imprime a resposta correspondente.
