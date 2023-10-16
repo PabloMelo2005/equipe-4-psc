@@ -1,5 +1,4 @@
 package activities;
-
 import java.util.Scanner;
 
 public class ForDois {
